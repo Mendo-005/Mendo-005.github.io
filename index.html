@@ -17,6 +17,7 @@
         </div>
         <div class="cv-download">
             <a href="./static/CV_marioMendoza.pdf" class="cv-button" download>Download CV</a>
+            <button class="menu-toggle">☰</button>
         </div>
         <nav class="nav">
             <ul class="nav-list">
@@ -110,41 +111,78 @@
 
         <section id="skills" class="skills">
             <div class="skills-title">
-                <h2>Skills</h2>
-                <p>Here are some of the technologies and tools I work with:</p>
+                <h2>Skills & Technologies</h2>
+                <p>Here are the technologies and tools I work with, organized by categories</p>
             </div>
-            <div class="skills-list">
-                <div class="skill">
-                    <img src="./static/icons/python_5968286.png" alt="Python" class="skill-icon">
-                    <span>Python</span>
+            
+            <div class="skills-container">
+                <!-- Categoría 1: Lenguajes -->
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="./static/icons/python_5968286.png" alt="Python" class="skill-icon">
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/java_5968231.png" alt="Java" class="skill-icon">
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/js_5968238.png" alt="JavaScript" class="skill-icon">
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/html5.png" alt="HTML" class="skill-icon" style="filter: brightness(0) invert(1);">
+                            <span class="skill-name">HTML5</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill">
-                    <img src="./static/icons/java_5968231.png" alt="Java" class="skill-icon">
-                    <span>Java</span>
+                
+                <!-- Categoría 2: Bases de Datos -->
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="./static/icons/mysql_5968254.png" alt="MySQL" class="skill-icon">
+                            <span class="skill-name">MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/sql_server.png" alt="Sql_server" class="skill-icon">
+                            <span class="skill-name">SQL Server</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/azure.png" alt="Azure" class="skill-icon">
+                            <span class="skill-name">Azure</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/mongodb.png" alt="MongoDB" class="skill-icon"  style="filter: brightness(0) invert(1);">
+                            <span class="skill-name">MongoDB</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill">
-                    <img src="./static/icons/mysql_5968254.png" alt="SQL" class="skill-icon">
-                    <span>SQL</span>
-                </div>
-                <div class="skill">
-                    <img src="./static/icons/html5.png" alt="HTML" class="skill-icon" style="filter: brightness(0) invert(1);">
-                    <span>HTML</span>
-                </div>
-                <div class="skill">
-                    <img src="./static/icons/css-3_5968194.png" alt="CSS" class="skill-icon">
-                    <span>CSS</span>
-                </div>
-                <div class="skill">
-                    <img src="./static/icons/js_5968238.png" alt="JavaScript" class="skill-icon">
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill">
-                    <img src="./static/icons/docker_5969124.png" alt="Docker" class="skill-icon">
-                    <span>Docker</span>
-                </div>
-                <div class="skill">
-                    <img src="./static/icons/IA.png" alt="Desarrollo de IA" class="skill-icon" style="filter: brightness(0) invert(1);">
-                    <span>Desarrollo de IA</span>
+                
+                <!-- Categoría 3: Herramientas -->
+                <div class="skill-category">
+                    <h3>Tools & Frameworks</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="./static/icons/docker_5969124.png" alt="Docker" class="skill-icon">
+                            <span class="skill-name">Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/git_1240970.png" alt="Git" class="skill-icon" style="filter: brightness(0) invert(1);">
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/flask.webp" alt="Flask" class="skill-icon" style="filter: brightness(0) invert(1);">
+                            <span class="skill-name">Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="./static/icons/IA.png" alt="AI" class="skill-icon" style="filter: brightness(0) invert(1);">
+                            <span class="skill-name">AI Development</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
