@@ -6,6 +6,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
 }
 
@@ -23,6 +24,16 @@ body {
     color: #8892b0;
 }
 
+#stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Detrás del contenido */
+    background: #0a192f; /* Fondo oscuro */
+}
+
 h1, h2, h3 {
     color: #ccd6f6;
 }
@@ -32,13 +43,23 @@ a {
     color: inherit;
 }
 
-/* Header */
+/* Cambiar el header a una barra lateral izquierda */
 .header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 5%;
-    background-color: #020c1b;
+    background-color: rgba(10, 25, 47, 0.8); /* Fondo semitransparente */
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    width: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+footer {
+    background-color: #0a192f;
+    padding: 2rem 5%;
+    margin-top: auto; 
 }
 
 .logo h1 {
@@ -46,24 +67,91 @@ a {
     letter-spacing: 1px;
 }
 
+.cv-download {
+    display: block; /* Asegurar que ocupe toda la línea */
+    color: #64ffda; /* Color del link */
+    font-weight: bold; /* Resaltar el texto */
+    text-decoration: none; /* Quitar subrayado */
+    padding: 1rem 0; /* Añadir padding */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.cv-download:hover {
+    color: #2effce;
+    text-decoration: underline;
+    
+}
+
 .nav-list {
-    display: flex;
-    gap: 2rem;
+    flex-direction: column; /* Cambiar a columna */
+    gap: 2rem; /* Reducir el espacio entre elementos */
+    width: 100%; /* Ocupa todo el ancho de la barra */
     list-style: none;
+}
+
+/* Separar la lista de links del título */
+.nav-list {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-left: 0; /* Quitar padding izquierdo */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    gap: 2rem; /* Espacio entre los elementos */
 }
 
 .nav-link {
     transition: color 0.3s ease;
-    color: #ccd6f6;
+    color: #eff2fa;
+}
+
+/* Conectar los botones del header con las secciones correspondientes */
+.nav-link {
+    cursor: pointer;
 }
 
 .nav-link:hover {
-    color: #64ffda;
+    color: #2effce;
 }
 
-/* Hero Section */
-.hero {
-    padding: 4rem 5%;
+/* Animación para los links de navegación */
+.nav-link {
+    position: relative;
+    padding-left: 1.5rem; /* Espacio para la raya */
+    transition: color 0.3s ease;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 0;
+    background-color: #64ffda; /* Color de la raya */
+    transition: height 0.3s ease;
+}
+
+.nav-link:hover::before {
+    height: 100%;
+}
+
+/* Estilo para el link activo */
+.nav-link.active {
+    color: #64ffda; /* Color del link activo */
+}
+
+.nav-link.active::before {
+    height: 100%;
+}
+
+/* Ajustar las secciones para que ocupen toda la pantalla */
+.hero, .projects, .skills {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 0 5%; /* Mantiene el padding horizontal */
 }
 
 .hero-inner {
@@ -111,11 +199,16 @@ a {
     background-color: #112240;
     border-radius: 4px;
     padding: 1.5rem;
-    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-color: #64ffda; /* Neon green border */
 }
 
 .project-image {
@@ -169,32 +262,77 @@ a {
     color: #64ffda;
 }
 
+/* Standardize skill icons */
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Neon border for skill buttons */
+.skill {
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-color: #64ffda; /* Neon green border */
+}
 /* Footer */
 footer {
-    background-color: #020c1b;
+    background-color: #0a192f;
     padding: 2rem 5%;
     margin-top: auto; 
 }
 
 .footer-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.footer-links {
-    display: flex;
-    gap: 2rem;
+/* Estilo para el link de descarga */
+.download-link {
+    margin-top: auto; /* Empujar hacia abajo */
+    text-align: center; /* Centrar el texto */
+    display: block; /* Asegurar que ocupe toda la línea */
+    color: #64ffda; /* Color del link */
+    font-weight: bold; /* Resaltar el texto */
+    text-decoration: none; /* Quitar subrayado */
+    padding: 1rem 0; /* Añadir padding */
+    transition: color 0.3s ease; /* Transición suave */
 }
 
-.footer-link {
-    transition: color 0.3s ease;
+.download-link:hover {
+    color: #ccd6f6; /* Cambiar color al pasar el ratón */
 }
 
-.footer-link:hover {
-    color: #64ffda;
+/* Efecto LED blanco para las letras */
+body, h1, h2, h3, p, a, span {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+                 0 0 10px rgba(255, 255, 255, 0.6),
+                 0 0 20px rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+}
+
+/* Efecto de luz que sigue al ratón */
+body::before, header::before, footer::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(35, 57, 87, 0.151) 0%, transparent 50%);
+    pointer-events: none;
+    transition: background 0.1s ease;
 }
 
 /* Responsive Design */
@@ -216,3 +354,40 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Estilo mejorado para los iconos del header */
+/* Posicionar los botones de LinkedIn y GitHub a 10px de la parte baja de la pantalla */
+.header-links {
+    position: fixed; /* Fijar posición en la pantalla */
+    bottom: 10px; /* A 10px de la parte baja */ 
+    display: flex;
+    flex-direction: row; /* Asegurar que estén en fila */
+    align-items: center;
+    gap: 1rem; /* Espaciado entre los botones */
+}
+
+.header-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ccd6f6;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-links a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Asegura que los iconos sean visibles en fondos oscuros */
+    transition: transform 0.3s ease;
+}
+
+.header-links a:hover {
+    color: #64ffda;
+    transform: scale(1.05);
+}
+
+.header-links a:hover img {
+    transform: scale(1.2);
+}
+
