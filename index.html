@@ -7,108 +7,153 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-inner">
-            <div class="logo">
-                <h1>Mario Mendoza</h1>
-            </div>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+<canvas id="stars"></canvas>
+    <!-- Resto del contenido -->
+    <header class="header-inner">
+        <div class="logo">
+            <h1>Mario Mendoza</h1>
+            <p>Software Developer</p>
         </div>
-        <div class="hero">
+        <div class="cv-download">
+            <a href="./static/CV_marioMendoza.pdf" class="cv-button" download>Download CV</a>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+            </ul>
+        </nav>
+        <div class="header-links">
+            <a href="https://www.linkedin.com/in/mariomendoza19/" class="footer-link" target="_blank">
+                <img src="./static/icons/linkedin_1051384.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Mendo-005" class="footer-link" target="_blank">
+                <img src="./static/icons/github_1051377.png" alt="GitHub">
+            </a>     
+        </div>
+    </header>
+
+    <main style="margin-left: 250px;">
+        <!-- Ajustar el margen izquierdo del contenido principal para que no quede oculto detrás del header -->
+        <section id="about" class="hero">
             <div class="hero-inner">
                 <div class="hero-img">
                     <img src="./static/LogoMM.png" alt="Mario Mendoza" class="hero-image">
                 </div>
                 <div class="hero-text">
-                    <h1>Welcome.</h2>
-                    <p> My name is Mario Mendoza , I'm a software developer from Spain.
-                        I have a passion for creating innovative solutions and a strong 
-                        commitment to delivering high-quality work.
+                    <h1>Welcome.</h1>
+                    <p>
+                        My name is Mario Mendoza, and I am a software developer from Spain. 
+                        I am currently pursuing a Higher Degree in Multiplatform Application Development, 
+                        with experience in the software development sector. My main strengths include leadership 
+                        and adaptability, enabling me to effectively manage teams and adjust to different environments 
+                        and challenges.
+                    </p><br>
+                    <p>
+                        I am an organized and meticulous individual with a strong ability to solve problems and make 
+                        informed decisions. I am committed to continuous learning and strive to apply my knowledge 
+                        and skills in challenging and collaborative environments.
                     </p>
                 </div>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <div class="projects">
-        <div class="projects-title">
-            <h2>My Work</h2>
-            <p>Here are some of my projects that I have worked on.</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project">
-                <div class="project-wrap">
-                    <div class="project-info">
-                        <img src="./static/V4_LHC.png" alt="Project 1" class="project-image">
-                        <h3>LHC Project Simulator</h3>
-                        <p>This project is a realistic simulator of the Large Hadron Collider (LHC) that uses JavaScript for the user 
-                            interface and Python with Flask for the backend. The goal is to create an accurate representation of the 
-                            experiments at the LHC and simulate the interactions between subatomic particles.</p>
+        <section id="projects" class="projects">
+            <div class="projects-title">
+                <h2>My Work</h2>
+                <p>Here are some of my projects that I have worked on.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project">
+                    <div class="project-wrap">
+                        <div class="project-info">
+                            <img src="./static/V4_LHC.png" alt="Project 1" class="project-image">
+                            <h3>LHC Project Simulator</h3>
+                            <p>This project is a realistic simulator of the Large Hadron Collider (LHC) that uses JavaScript for the user 
+                                interface and Python with Flask for the backend. The goal is to create an accurate representation of the 
+                                experiments at the LHC and simulate the interactions between subatomic particles.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Mendo-005/DAM-1/tree/main/V4sim_CERN" class="project-link" target="_blank">View Project</a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Mendo-005/DAM-1/tree/main/V4sim_CERN" class="project-link" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <div class="project-wrap">
+                        <div class="project-info">
+                            <img src="./static/Tabac_Web.png" alt="Project 1" class="project-image">
+                            <h3>Cigar Detection System</h3>
+                            <p>Smart system for detecting, verifying, and classifying authentic cigars, 
+                                helping prevent counterfeits and improve quality control worldwide.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Mendo-005/DAM-1/tree/main/test_web_ai" class="project-link" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-wrap">
+                        <div class="project-info">
+                            <img src="https://i.imgur.com/2Xk1v0H.png" alt="Project 1" class="project-image">
+                            <h3>Project 1</h3>
+                            <p>Project 1 description goes here.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">View Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="project">
-                <div class="project-wrap">
-                    <div class="project-info">
-                        <img src="./static/Tabac_Web.png" alt="Project 1" class="project-image">
-                        <h3>Cigar Detection System</h3>
-                        <p>Smart system for detecting, verifying, and classifying authentic cigars, 
-                            helping prevent counterfeits and improve quality control worldwide.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Mendo-005/DAM-1/tree/main/test_web_ai" class="project-link" target="_blank">View Project</a>
-                    </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="skills-title">
+                <h2>Skills</h2>
+                <p>Here are some of the technologies and tools I work with:</p>
+            </div>
+            <div class="skills-list">
+                <div class="skill">
+                    <img src="./static/icons/python_5968286.png" alt="Python" class="skill-icon">
+                    <span>Python</span>
+                </div>
+                <div class="skill">
+                    <img src="./static/icons/java_5968231.png" alt="Java" class="skill-icon">
+                    <span>Java</span>
+                </div>
+                <div class="skill">
+                    <img src="./static/icons/mysql_5968254.png" alt="SQL" class="skill-icon">
+                    <span>SQL</span>
+                </div>
+                <div class="skill">
+                    <img src="./static/icons/html5.png" alt="HTML" class="skill-icon" style="filter: brightness(0) invert(1);">
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <img src="./static/icons/css-3_5968194.png" alt="CSS" class="skill-icon">
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <img src="./static/icons/js_5968238.png" alt="JavaScript" class="skill-icon">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <img src="./static/icons/docker_5969124.png" alt="Docker" class="skill-icon">
+                    <span>Docker</span>
+                </div>
+                <div class="skill">
+                    <img src="./static/icons/IA.png" alt="Desarrollo de IA" class="skill-icon" style="filter: brightness(0) invert(1);">
+                    <span>Desarrollo de IA</span>
                 </div>
             </div>
-            <div class="project">
-                <div class="project-wrap">
-                    <div class="project-info">
-                        <img src="https://i.imgur.com/2Xk1v0H.png" alt="Project 1" class="project-image">
-                        <h3>Project 1</h3>
-                        <p>Project 1 description goes here.</p>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
+    </main>
 
-    <div class="skills">
-        <div class="skills-title">
-            <h2>Skills</h2>
-            <p>Here are some of the technologies and tools I work with:</p>
-        </div>
-        <div class="skills-list">
-            <span class="skill">Python</span>
-            <span class="skill">Java</span>
-            <span class="skill">SQL</span>
-            <span class="skill">Azure</span>
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">Docker</span>
-            <span class="skill">Desarrollo de IA</span>
-        </div>
-    </div>
-
-    <footer>
+    <footer style="margin-left: 250px;">
+        <!-- Ajustar el margen izquierdo del footer para que no quede oculto detrás del header -->
         <div class="footer-inner">
             <div class="footer-copy">
                 <p>&copy; 2025 Mario Mendoza. All rights reserved.</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/mariomendoza19/" class="footer-link" target="_blank">LinkedIn</a>
-                <a href="https://github.com/Mendo-005" class="footer-link" target="_blank">GitHub</a>     
             </div>
         </div>
     </footer>
