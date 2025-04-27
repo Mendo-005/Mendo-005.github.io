@@ -58,7 +58,13 @@ a {
 }
 
 .cv-download {
-    margin: 1.5rem 0;
+    display: none; /* Hidden by default */
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.nav.active .cv-download {
+    display: block; /* Visible when the menu is active */
 }
 
 .cv-button {
@@ -400,6 +406,18 @@ main {
     .skill-items {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* Ajustamos el botón de descarga para que esté dentro del menú toggle en móvil */
+    .cv-download {
+        order: 4; /* Cambiamos el orden para que esté dentro del menú */
+        margin: 1rem 0; /* Ajustamos el margen */
+        display: block; /* Aseguramos que sea visible */
+        text-align: center; /* Centramos el botón */
+    }
+
+    .nav {
+        order: 3; /* Ajustamos el orden del menú para que esté antes del botón */
+    }
 }
 
 /* Versión tablet */
@@ -451,26 +469,19 @@ footer {
         width: auto;
     }
 
-    .cv-download {
-        order: 2;
-        margin: 0;
-        display: flex;
-        align-items: center;
-    }
-
     .menu-toggle {
         display: block;
     }
 
     .nav {
-        order: 4;
+        order: 3;
         width: 100%;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
     }
 
-    .nav.active {
+    .nav.active  {
         max-height: 500px;
         margin-top: 1rem;
     }
@@ -482,7 +493,7 @@ footer {
 
     .header-links {
         position: static;
-        order: 3;
+        order: 2;
         width: 100%;
         justify-content: center;
         padding: 1rem 0;
