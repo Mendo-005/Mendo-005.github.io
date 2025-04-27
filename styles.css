@@ -588,3 +588,9 @@ body::before, header::before, footer::before {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media (min-width: 769px) {
+    .cv-download {
+        display: block !important; /* Siempre visible en pantallas grandes */
+    }
+}
