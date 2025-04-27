@@ -140,4 +140,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ejecutar al cargar y al redimensionar
     window.addEventListener('resize', adjustLayout);
     adjustLayout();
+    
+    // Asegurar que el botón de descarga no se oculte en pantallas grandes
+    if (window.innerWidth > 768) {
+        const cvDownload = document.querySelector('.cv-download');
+        cvDownload.style.display = 'block';
+    }
 });
