@@ -97,12 +97,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     menuToggle.addEventListener('click', function() {
         nav.classList.toggle('active');
-        
-        // Cambiar el icono del botón
+
+        // Toggle the visibility of the CV download button
+        const cvDownload = document.querySelector('.cv-download');
         if (nav.classList.contains('active')) {
             menuToggle.textContent = '✕';
+            cvDownload.style.display = 'block';
         } else {
             menuToggle.textContent = '☰';
+            cvDownload.style.display = 'none';
         }
     });
     
